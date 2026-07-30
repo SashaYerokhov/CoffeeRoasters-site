@@ -1,0 +1,92 @@
+:root {
+  --neutral-900: hsl(215, 19%, 25%);
+  --neutral-500: hsl(215, 5%, 54%);
+  --neutral-200: hsl(26, 11%, 87%);
+  --neutral-100: hsl(40, 29%, 94%);
+  --neutral-50: hsl(43, 78%, 98%);
+  --neutral-0: hsl(0, 0%, 100%);
+  --teal-600: hsl(179, 61%, 29%);
+  --teal-300: hsl(178, 55%, 61%);
+  --orange-200: hsl(25, 94%, 86%);
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../assets/fonts/Barlow-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../assets/fonts/Barlow-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces 72pt Soft";
+  src: url("../assets/fonts/Fraunces72ptSoft-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/Fraunces9-Balck/Fraunces-9ptBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/Fraunces9-Italic/Fraunces-9ptBlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow";
+  background-color: var(--neutral-50);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  border: 0 none transparent;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.container {
+  max-width: 1150px;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
