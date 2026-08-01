@@ -33,15 +33,17 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Fraunces";
-  src: url("../assets/fonts/Fraunces9-Balck/Fraunces-9ptBlack.woff2") format("woff2");
+  font-family: "Fraunces 9pt";
+  src: url("../assets/fonts/Fraunces9-Balck/Fraunces-9ptBlack.woff2")
+    format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("../assets/fonts/Fraunces9-Italic/Fraunces-9ptBlackItalic.woff2") format("woff2");
+  src: url("../assets/fonts/Fraunces9-Italic/Fraunces-9ptBlackItalic.woff2")
+    format("woff2");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -61,6 +63,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Barlow";
+  font-size: 1rem;
   background-color: var(--neutral-50);
 }
 img {
@@ -71,6 +74,7 @@ img {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -89,4 +93,342 @@ button {
   max-width: 1150px;
   margin-inline: auto;
   padding-inline: 10px;
+}
+.plan__link {
+  text-decoration: none;
+  width: 218px;
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal-600);
+  border-radius: 6px;
+  font-family: "Fraunces 72pt Soft";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--neutral-50);
+  cursor: pointer;
+  transition: background 450ms ease-in-out;
+  &:hover {
+    background: var(--teal-300);
+  }
+  &:focus-within {
+    outline-color: var(--teal-300);
+    outline-offset: 4px;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 85px;
+  .menu__button {
+    display: none;
+    &:hover,
+    &:focus,
+    &:active {
+      outline-color: var(--neutral-50);
+      outline-offset: 6px;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 33px;
+      li {
+        a {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 130%;
+          letter-spacing: 0.923077px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: var(--neutral-500);
+          cursor: pointer;
+          transition: color 450ms ease-in-out;
+          outline: none;
+          &:hover {
+            color: var(--neutral-900);
+          }
+        }
+        &:focus-within {
+          outline-color: var(--neutral-50);
+          outline-offset: 4px;
+          /* background: var(--neutral-50); */
+          box-shadow:
+            0px 0px 0px 3px #fefcf7,
+            0px 0px 0px 5px #0e8784;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+.main {
+  .home__hero {
+    width: clamp(21.438rem, calc(-4.898rem + 93.636vw), 79.375rem);
+    height: clamp(31.625rem, calc(29.409rem + 7.879vw), 36.5rem);
+    margin: 0 auto;
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;
+    margin-block-end: 140px;
+    picture {
+      .hero__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* Помогает избежать искажения пропорций */
+        object-fit: cover;
+        border-radius: 24px;
+      }
+    }
+    .home__hero-content {
+      position: absolute;
+      top: 50%;
+      left: 6.3%;
+      /* Центрирование по вертикали */
+      transform: translateY(-50%);
+      z-index: 2;
+      /* Белый текст для контраста */
+      color: var(--neutral-50);
+      /* max-width: 493px; */
+      max-width: clamp(18.438rem, calc(12.813rem + 20vw), 30.813rem);
+
+      h1 {
+        font-family: "Fraunces 72pt Soft";
+        font-weight: 900;
+        /* font-size: 72px; */
+        font-size: clamp(2.5rem, calc(1.591rem + 3.232vw), 4.5rem);
+        line-height: 100%;
+        margin-block-end: 32px;
+      }
+      p {
+        font-family: "Barlow";
+        font-weight: 400;
+        line-height: 160%;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+        margin-block-end: 48px;
+      }
+    }
+  }
+  .home__collection {
+    position: relative;
+    max-width: 1110px;
+    /* Отступы сверху и снизу секции */
+    padding: 100px 0;
+    /* Светлый фон всей секции */
+    background-color: var(--neutral-50);
+    overflow: hidden;
+    margin-block-end: 40px;
+    h2 {
+      font-family: "Fraunces 9pt";
+      /* Позиционирование по центру на заднем плане */
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      text-align: center;
+      margin: 0;
+      width: 1110px;
+      /* font-size: 150px; */
+      font-size: clamp(2.5rem, calc(-0.625rem + 11.111vw), 9.375rem);
+      line-height: 115px;
+      color: var(--neutral-500);
+      /* Эффект градиента внутри букв */
+      background: linear-gradient(
+        180deg,
+        rgba(131, 136, 143, 0.4) 0%,
+        #83888f 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: lowercase;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    .collection__list {
+      /* Выстраиваем пачки в ряд поверх текста */
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 32px;
+      li {
+        width: 253.5px;
+        img {
+          display: block;
+          margin-block-end: 48px;
+        }
+        .collection__content {
+          h4 {
+            font-family: "Fraunces 72pt Soft";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 150%;
+            text-align: center;
+            color: var(--neutral-900);
+            margin-block-end: 24px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            text-align: center;
+            color: var(--neutral-900);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    max-width: 724px;
+  }
+  .header {
+    padding-inline: 32px;
+  }
+  .main {
+    .home__hero {
+      margin-block-end: 80px;
+    }
+    .home__collection {
+      max-width: 704px;
+      /* Уменьшаем отступы секции и добавляем боковые поля */
+      padding: 60px 20px;
+      margin-block-end: 20px;
+      h2 {
+        top: 6%;
+      }
+      .collection__list {
+        flex-direction: column;
+        gap: 24px 0;
+        li {
+          width: 704px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          column-gap: 32px;
+          img {
+            width: 235.5px;
+            margin-block-end: 0;
+          }
+          .collection__content {
+            width: 300px;
+            h4 {
+              text-align: start;
+            }
+            p {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 450px) {
+  .container {
+    max-width: 363px;
+  }
+  .plan__link {
+    margin: 0 auto;
+  }
+  .header {
+    position: relative;
+    padding: 24px 16px 32px;
+    .open__button {
+      display: block;
+    }
+    nav {
+      width: 375px;
+      height: 577px;
+      visibility: hidden;
+      position: absolute;
+      z-index: 5;
+      top: 50px;
+      left: 8%;
+      justify-content: center;
+      align-items: start;
+      background: linear-gradient(
+        360deg,
+        rgba(254, 252, 247, 0.504981) 0%,
+        #fefcf7 55.94%
+      );
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      padding-block-start: 80px;
+      ul {
+        flex-direction: column;
+        gap: 32px 0;
+        li {
+          a {
+            font-family: "Fraunces 9pt";
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            color: var(--neutral-900);
+          }
+        }
+      }
+    }
+  }
+  .menu__active nav {
+    visibility: visible;
+  }
+  .menu__active .open__button {
+    display: none;
+  }
+  .menu__active .close__button {
+    display: block;
+  }
+  .main {
+    .home__hero {
+      margin-block-end: 80.2px;
+      .main__hero-content {
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .home__collection {
+      h2 {
+        top: 2%;
+      }
+      .collection__list {
+        row-gap: 32px;
+        li {
+          width: 343px;
+          flex-direction: column;
+          gap: 24px 0;
+          .collection__content {
+            width: 343px;
+            h4 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
 }
