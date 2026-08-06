@@ -647,9 +647,9 @@ button {
       &::before {
         position: absolute;
         content: "";
-        width: 810px;
+        width: 840px;
         height: 1px;
-        left: 30px;
+        left: 15px;
         top: 15px;
         border: 2px solid var(--orange-200);
       }
@@ -714,6 +714,157 @@ button {
           line-height: 160%;
           color: var(--neutral-50);
         }
+      }
+    }
+  }
+  .plan__subscribe {
+    display: flex;
+    align-items: start;
+    column-gap: 128px;
+    margin-block-end: 140px;
+    nav {
+      ul {
+        li {
+          font-family: "Fraunces 72pt Soft";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 150%;
+          color: var(--neutral-500);
+          /* color: var(--neutral-900); */
+          display: flex;
+          align-items: center;
+          column-gap: 24px;
+          padding-block: 24px;
+          border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+          width: 251.81px;
+          transition: color 450ms ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: var(--neutral-900);
+          }
+          span {
+            font-family: "Fraunces 72pt Soft";
+            font-size: 24px;
+            line-height: 150%;
+            color: var(--neutral-500);
+          }
+        }
+      }
+    }
+    .plan__subscribe-accordion {
+      .subscribe__accordion-item {
+        margin-block-end: 32px;
+        .accordion__tiger {
+          font-family: "Fraunces 72pt Soft";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 40px;
+          line-height: 120%;
+          width: 100%;
+          color: var(--neutral-500);
+          margin-block-end: 48px;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+          .active & svg {
+            rotate: 180deg;
+          }
+        }
+        .accordion__panel {
+          display: flex;
+          align-items: center;
+          column-gap: 23px;
+          max-height: 0;
+          visibility: hidden;
+          .active & {
+            /* отрегулируйте максимальное количество контента на вашей панели. */
+            max-height: 730px;
+            visibility: visible;
+          }
+          .accordion__panel-content {
+            width: 228.06px;
+            height: 202px;
+            padding: 32px 24px;
+            background: var(--neutral-100);
+            color: var(--neutral-900);
+            border-radius: 8px;
+            position: relative;
+            transition: background 450ms ease-in-out;
+            &:hover {
+              background-color: var(--orange-200);
+            }
+            &:focus,
+            &:active {
+              outline-color: var(--neutral-50);
+              outline-offset: 6px;
+            }
+            &.active {
+              background: var(--teal-600);
+              color:var(--neutral-0)
+            }
+            .card-toggle-btn {
+              /* Сбрасываем стандартные стили кнопки */
+              background: none;
+              border: none;
+              padding: 0;
+              font: inherit;
+              color: inherit;
+              cursor: pointer;
+              font-family: "Fraunces 72pt Soft";
+              font-size: 24px;
+              line-height: 150%;
+              margin-block-end: 24px;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                /* Кнопка перекроет весь блок для клика */
+                z-index: 1;
+              }
+            }
+            /* h4 {
+            } */
+            p {
+              line-height: 160%;
+            }
+          }
+        }
+      }
+      .subscribe__accordion-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 48px 64px;
+        gap: 8px;
+        isolation: isolate;
+        width: 730px;
+        height: 202px;
+        background: var(--neutral-900);
+        margin-block-end: 48px;
+        .summary__title {
+          line-height: 160%;
+          text-transform: uppercase;
+          color: var(--neutral-0);
+          mix-blend-mode: normal;
+          opacity: 0.5;
+          margin-block-end: 8px;
+        }
+        .summary__text {
+          font-family: "Fraunces 72pt Soft";
+          font-size: 24px;
+          line-height: 150%;
+          color: var(--neutral-0);
+        }
+      }
+      .plan__link {
+        background: var(--neutral-200);
+        /* переработать - это временно */
+        margin-left: 500px;
       }
     }
   }
@@ -946,7 +1097,7 @@ button {
       margin-block-end: 80px;
       div {
         &::before {
-          width: 500px;
+          width: 520px;
         }
         span {
           &:nth-child(2) {

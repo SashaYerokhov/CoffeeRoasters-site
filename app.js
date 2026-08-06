@@ -32,3 +32,50 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle();
   escapeMenu();
 });
+
+// Расскрытие аккордеона
+// Нужно сделать так, чтобы открывались все пункты аккордеона
+function orderParameters() {
+  const root = document.querySelector(".plan__subscribe-accordion");
+  if (!root) return;
+
+  const items = root.querySelectorAll(".subscribe__accordion-item");
+  const triggers = root.querySelectorAll(".accordion__tiger");
+
+  items[0].classList.add("active");
+  triggers[0].setAttribute("aria-expanded", "true");
+
+  items.forEach((item) => {
+    const trigger = item.querySelector(".accordion__tiger");
+
+    trigger.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // для закрытия аккордеонов
+      items.forEach((itm) => {
+        itm.classList.remove("active");
+        itm.querySelector(".accordion__tiger");
+        itm.setAttribute("aria-expanded", "false");
+      });
+      if (!isActive) {
+        item.classList.add("active");
+        trigger.setAttribute("aria-expanded", "true");
+      } else {
+      }
+    });
+  });
+
+  // переключение карточек
+  const cardSelections = root.querySelectorAll('.accordion__panel-content');
+  // console.log(cardSelections);
+  cardSelections.forEach((cardSelection, index) => {
+    cardSelection.addEventListener('click', () => {
+      cardSelections.forEach((cardS) => cardS.classList.remove('active'));
+      cardSelection.classList.add('active');
+    })
+  })
+  
+}
+
+orderParameters();
+
