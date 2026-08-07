@@ -126,15 +126,15 @@
       <section class="plan__subscribe container">
         <nav>
           <ul>
-            <li><span>01</span>Preferences</li>
-            <li><span>02</span>Bean type</li>
-            <li><span>03</span>Quantity</li>
-            <li><span>04</span>Grind option</li>
-            <li><span>05</span>Deliveries</li>
+            <li data-menu-id="1"><span>01</span>Preferences</li>
+            <li data-menu-id="2"><span>02</span>Bean type</li>
+            <li data-menu-id="3"><span>03</span>Quantity</li>
+            <li data-menu-id="4"><span>04</span>Grind option</li>
+            <li data-menu-id="5"><span>05</span>Deliveries</li>
           </ul>
         </nav>
         <div class="plan__subscribe-accordion">
-          <div class="subscribe__accordion-item active">
+          <div class="subscribe__accordion-item" data-accordion-id="1">
             <h3>
               <button
                 type="button"
@@ -152,13 +152,13 @@
               </button>
             </h3>
             <div class="accordion__panel">
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="1">
                 <h4>
                   <button type="button" class="card-toggle-btn">Capsule</button>
                 </h4>
                 <p>Compatible with Nespresso systems and similar brewers</p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="2">
                 <h4>
                   <button type="button" class="card-toggle-btn">Filter</button>
                 </h4>
@@ -166,7 +166,7 @@
                   For pour over or drip methods like Aeropress, Chemex, and V60
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="3">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Espresso
@@ -179,7 +179,7 @@
               </div>
             </div>
           </div>
-          <div class="subscribe__accordion-item">
+          <div class="subscribe__accordion-item" data-accordion-id="2">
             <h3>
               <button
                 type="button"
@@ -197,7 +197,7 @@
               </button>
             </h3>
             <div class="accordion__panel">
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="4">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Single origin
@@ -208,7 +208,7 @@
                   farm
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="5">
                 <h4>
                   <button type="button" class="card-toggle-btn">Decaf</button>
                 </h4>
@@ -216,7 +216,7 @@
                   Just like regular coffee, except the caffeine has been removed
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="6">
                 <h4>
                   <button type="button" class="card-toggle-btn">Blended</button>
                 </h4>
@@ -227,7 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="subscribe__accordion-item">
+          <div class="subscribe__accordion-item" data-accordion-id="3">
             <h3>
               <button
                 type="button"
@@ -245,7 +245,7 @@
               </button>
             </h3>
             <div class="accordion__panel">
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="7">
                 <h4>
                   <button type="button" class="card-toggle-btn">250g</button>
                 </h4>
@@ -253,7 +253,7 @@
                   Perfect for the solo drinker. Yields about 12 delicious cups.
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="8">
                 <h4>
                   <button type="button" class="card-toggle-btn">500g</button>
                 </h4>
@@ -261,7 +261,7 @@
                   Perfect option for a couple. Yields about 40 delectable cups.
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="9">
                 <h4>
                   <button type="button" class="card-toggle-btn">1000g</button>
                 </h4>
@@ -272,7 +272,7 @@
               </div>
             </div>
           </div>
-          <div class="subscribe__accordion-item">
+          <div class="subscribe__accordion-item" data-accordion-id="4">
             <h3>
               <button
                 type="button"
@@ -290,7 +290,7 @@
               </button>
             </h3>
             <div class="accordion__panel">
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="10">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Wholebean
@@ -298,7 +298,7 @@
                 </h4>
                 <p>Best choice if you cherish the full sensory experience</p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="11">
                 <h4>
                   <button type="button" class="card-toggle-btn">Filter</button>
                 </h4>
@@ -306,7 +306,7 @@
                   For drip or pour-over coffee methods such as V60 or Aeropress
                 </p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="12">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Cafetiére
@@ -319,7 +319,7 @@
               </div>
             </div>
           </div>
-          <div class="subscribe__accordion-item">
+          <div class="subscribe__accordion-item" data-accordion-id="5">
             <h3>
               <button
                 type="button"
@@ -337,7 +337,7 @@
               </button>
             </h3>
             <div class="accordion__panel">
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="13">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Every week
@@ -345,7 +345,7 @@
                 </h4>
                 <p>$14.00 per shipment. Includes free first-class shipping.</p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="14">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Every 2 weeks
@@ -353,7 +353,7 @@
                 </h4>
                 <p>$17.25 per shipment. Includes free priority shipping.</p>
               </div>
-              <div class="accordion__panel-content">
+              <div class="accordion__panel-content" data-card-id="15">
                 <h4>
                   <button type="button" class="card-toggle-btn">
                     Every month

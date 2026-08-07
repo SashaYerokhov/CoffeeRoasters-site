@@ -742,6 +742,13 @@ button {
           cursor: pointer;
           &:hover {
             color: var(--neutral-900);
+            opacity: 0.6;
+          }
+          &.pick {
+            color: var(--neutral-900);
+            span {
+              color: var(--teal-600);
+            }
           }
           span {
             font-family: "Fraunces 72pt Soft";
@@ -765,7 +772,7 @@ button {
           color: var(--neutral-500);
           margin-block-end: 48px;
           display: flex;
-          flex-flow: row wrap;
+          /* flex-flow: row wrap; */
           justify-content: space-between;
           align-items: center;
           .active & svg {
@@ -802,7 +809,7 @@ button {
             }
             &.active {
               background: var(--teal-600);
-              color:var(--neutral-0)
+              color: var(--neutral-0);
             }
             .card-toggle-btn {
               /* Сбрасываем стандартные стили кнопки */
@@ -1120,6 +1127,41 @@ button {
         }
       }
     }
+    .plan__subscribe {
+      flex-direction: column;
+      gap: 64px 0;
+      margin-block-end: 80px;
+      nav {
+        ul {
+          li {
+            padding-block: 20px;
+          }
+        }
+      }
+      .plan__subscribe-accordion {
+        .subscribe__accordion-item {
+          .accordion__tiger {
+            font-size: clamp(1.75rem, calc(0.689rem + 3.774vw), 2.5rem);
+            max-width: 704px;
+            margin-block-end: 32px;
+          }
+          .accordion__panel {
+            column-gap: 24px;
+            .accordion__panel-content {
+              width: 218.67px;
+              height: 170px;
+              padding: 20px;
+              .card-toggle-btn {
+                margin-block-end: 16px;
+              }
+            }
+          }
+        }
+        .subscribe__accordion-summary {
+          padding-block: 48px;
+        }
+      }
+    }
   }
   .footer {
     padding: 40px 20px;
@@ -1385,6 +1427,42 @@ button {
           p {
             text-align: center;
           }
+        }
+      }
+    }
+    .plan__subscribe {
+      max-width: 343px;
+      .plan__subscribe-accordion {
+        .subscribe__accordion-item {
+          .accordion__tiger {
+            max-width: 343px;
+            text-align: left;
+            span {
+              width: 303px;
+             text-wrap: balance;
+            }
+          }
+          .accordion__panel {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px 0;
+            .active & {
+              max-height: 464px;
+            }
+            .accordion__panel-content {
+              width: 343px;
+              height: 144px;
+            }
+          }
+        }
+        .subscribe__accordion-summary {
+          width: 343px;
+          height: 274px;
+          padding-inline: 24px;
+          margin-block-end: 32px;
+        }
+        .plan__link {
+          margin-left: 125px;
         }
       }
     }
