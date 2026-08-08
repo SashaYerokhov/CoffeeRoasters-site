@@ -106,7 +106,6 @@ button {
   background: var(--teal-600);
   border-radius: 6px;
   font-family: "Fraunces 9pt";
-  font-weight: 900;
   font-size: 18px;
   line-height: 140%;
   text-align: center;
@@ -248,8 +247,8 @@ button {
         rgba(131, 136, 143, 0.4) 0%,
         #83888f 100%
       );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
       text-transform: lowercase;
       mix-blend-mode: normal;
       opacity: 0.5;
@@ -760,6 +759,12 @@ button {
       }
     }
     .plan__subscribe-accordion {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
       .subscribe__accordion-item {
         margin-block-end: 32px;
         .accordion__tiger {
@@ -842,6 +847,12 @@ button {
           }
         }
       }
+      /* Дополнение в CSS для скрытия аккордеона помола */
+      .subscribe__accordion-item.disabled-accordion {
+        opacity: 0.3;
+        /* Пользователь не сможет его открыть */
+        pointer-events: none; 
+      }
       .subscribe__accordion-summary {
         display: flex;
         flex-direction: column;
@@ -864,14 +875,17 @@ button {
         .summary__text {
           font-family: "Fraunces 72pt Soft";
           font-size: 24px;
-          line-height: 150%;
+          line-height: 167%;
           color: var(--neutral-0);
         }
       }
       .plan__link {
-        background: var(--neutral-200);
-        /* переработать - это временно */
-        margin-left: 500px;
+        align-self: flex-end;
+        &.disabled {
+          pointer-events: none;
+          cursor: not-allowed;
+          background: var(--neutral-200);
+        }
       }
     }
   }
@@ -1439,7 +1453,7 @@ button {
             text-align: left;
             span {
               width: 303px;
-             text-wrap: balance;
+              text-wrap: balance;
             }
           }
           .accordion__panel {
@@ -1462,7 +1476,7 @@ button {
           margin-block-end: 32px;
         }
         .plan__link {
-          margin-left: 125px;
+          align-self: center;
         }
       }
     }
